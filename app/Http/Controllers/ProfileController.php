@@ -20,7 +20,6 @@ class ProfileController extends Controller
         return view('backend.pages.profile.profile');
     }
 
-
     public function update(Request $request, $id)
     {
         $user = User::find($id);
@@ -29,7 +28,6 @@ class ProfileController extends Controller
             'name' => 'required',
             'email' => 'required | unique:users,email,'.$user->id,
             'address' => 'required',
-            'phone_no' => 'required',
             'gender' => 'required',
             'dob' => 'required'
         ]);
@@ -37,7 +35,6 @@ class ProfileController extends Controller
         $user->name = $inputFields['name'];
         $user->email = $inputFields['email'];
         $user->address = $inputFields['address'];
-        $user->phone_no = $inputFields['phone_no'];
         $user->gender = $inputFields['gender'];
         $user->dob = $inputFields['dob'];
 

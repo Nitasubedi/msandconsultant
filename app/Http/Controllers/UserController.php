@@ -47,7 +47,6 @@ class UserController extends Controller
             'email' => 'required | unique:users,email',
             'address' => 'required',
             'password' => 'required | min:8 | max:50',
-            'phone_no' => 'required',
             'gender' => 'required',
             'dob' => 'required'
         ]);
@@ -56,7 +55,6 @@ class UserController extends Controller
         $user->email = $inputFields['email'];
         $user->address = $inputFields['address'];
         $user->password = bcrypt($inputFields['password']);
-        $user->phone_no = $inputFields['phone_no'];
         $user->gender = $inputFields['gender'];
         $user->dob = $inputFields['dob'];
         if ($request->hasFile('image')) {
@@ -110,7 +108,6 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required | unique:users,email,' . $user->id,
             'address' => 'required',
-            'phone_no' => 'required',
             'gender' => 'required',
             'dob' => 'required'
         ]);
@@ -118,7 +115,6 @@ class UserController extends Controller
         $user->name = $inputFields['name'];
         $user->email = $inputFields['email'];
         $user->address = $inputFields['address'];
-        $user->phone_no = $inputFields['phone_no'];
         $user->gender = $inputFields['gender'];
         $user->dob = $inputFields['dob'];
 

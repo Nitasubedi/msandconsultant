@@ -79,7 +79,9 @@
                                         <th>S.N</th>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Gender</th>
+                                        <th>DOB</th>
+                                        <th>Address</th>
                                         <th>Image</th>
                                         <th>Action</th>
                                     </tr>
@@ -90,10 +92,14 @@
                                         <td>{{$i++}}</td>
                                         <td>{{$user['name']}}</td>
                                         <td>{{$user['email']}}</td>
-                                        <td>{{$user['phone_no']}}</td>
+                                        <td>{{$user['gender']}}</td>
+                                        <td>{{$user['dob']}}</td>
+                                        <td>{{$user['address']}}</td>
                                         <td><img src="{{asset('public/'.$user->image)}}" alt="{{$user->name}}"
                                                 height="60px" width="60px" style="object-fit: contain"></td>
                                         <td>
+
+
                                             <div class="d-flex" style="gap: 3px;">
                                                 <a href="{{route('users.edit',$user->id)}}">
                                                     <button class="btn btn-primary btn-sm">
@@ -117,8 +123,11 @@
                                 <tfoot>
                                     <tr>
                                         <th>S.N</th>
+                                        <th>Name</th>
                                         <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Gender</th>
+                                        <th>DOB</th>
+                                        <th>Address</th>
                                         <th>Image</th>
                                         <th>Action</th>
                                     </tr>
